@@ -2072,7 +2072,7 @@ class Player extends MediaProxy {
     const { videoWidth, videoHeight } = this.media
     const { fitVideoSize, videoFillMode } = this.config
 
-    if (videoFillMode === 'fill' || videoFillMode === 'cover' || videoFillMode  === 'contain') {
+    if (videoFillMode === 'fill' || videoFillMode === 'cover' || videoFillMode === 'contain') {
       this.setAttribute('data-xgfill', videoFillMode)
     }
 

@@ -793,10 +793,11 @@ class MediaProxy extends EventEmitter {
    *
    * @param { string } event
    * @param { (data?: any) => any } callback
-   * @returns
+   * @returns { () => void }
    */
   on (event, callback, ...args) {
     super.on(event, callback, ...args)
+    return () => {this.off(event, callback)}
   }
 
   /**
